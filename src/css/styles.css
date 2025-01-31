@@ -16,3 +16,49 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+
+body {
+  margin: 0;
+}
+
+.gallery {
+  padding: 24px 156px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  width: 1440px;
+  background-color: #fff;
+  list-style: none;
+  margin: 0;
+}
+.gallery-item {
+  list-style: none;
+  cursor: pointer;
+}
+
+.gallery-image {
+  width: 360px;
+  height: 200px;
+}
+
+.feedback-form {
+  width: 480px;
+}
+
+.feedback-form > label {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  font: inherit;
+  padding: 8px;
+}
+
+.feedback-form textarea {
+  resize: none;
+}
