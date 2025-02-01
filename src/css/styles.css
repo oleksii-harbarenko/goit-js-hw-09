@@ -1,64 +1,27 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
-
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
-
-body {
+ul {
+  list-style: none;
   margin: 0;
-}
-
-.gallery {
-  padding: 24px 156px;
+  padding: 0;
   display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  width: 1440px;
-  background-color: #fff;
-  list-style: none;
-  margin: 0;
+  gap: 10px;
 }
-.gallery-item {
-  list-style: none;
+
+li {
+  background-color: #3b82f6;
+  max-width: 95px;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
 }
 
-.gallery-image {
-  width: 360px;
-  height: 200px;
+li:hover,
+li:focus {
+  background-color: #2563eb;
 }
 
-.feedback-form {
-  width: 480px;
-}
-
-.feedback-form > label {
-  width: 100%;
-  margin-bottom: 16px;
-  padding: 8px;
-  display: flex;
-  flex-direction: column;
-}
-
-.feedback-form input,
-.feedback-form textarea {
-  font: inherit;
-  padding: 8px;
-}
-
-.feedback-form textarea {
-  resize: none;
+a {
+  text-decoration: none;
+  color: white;
 }

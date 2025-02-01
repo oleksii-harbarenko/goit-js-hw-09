@@ -15,8 +15,10 @@ refs.form.addEventListener('input', e => {
 
 function initPage() {
   const data = loadFromLS(STORAGE_KEY);
-  refs.form.elements.email.value = data.email || '';
-  refs.form.elements.message.value = data.message || '';
+  if (data) {
+    refs.form.elements.email.value = data.email || '';
+    refs.form.elements.message.value = data.message || '';
+  }
 }
 
 initPage();
@@ -28,10 +30,11 @@ refs.form.addEventListener('submit', e => {
     alert('Fill please all fields');
     return;
   }
-
+  const email = e.currentTarget.elements.email.value.trim();
+  const message = e.currentTarget.elements.message.value.trim();
+  formData = { email, message };
   console.log(formData);
   localStorage.removeItem(STORAGE_KEY);
-  formData = { email: '', message: '' };
   e.target.reset();
 });
 
