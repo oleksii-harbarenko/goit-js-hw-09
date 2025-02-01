@@ -18,6 +18,7 @@ function initPage() {
   if (data) {
     refs.form.elements.email.value = data.email || '';
     refs.form.elements.message.value = data.message || '';
+    formData = data;
   }
 }
 
